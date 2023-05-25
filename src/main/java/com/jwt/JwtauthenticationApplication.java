@@ -1,5 +1,6 @@
 package com.jwt;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class JwtauthenticationApplication implements CommandLineRunner {
 	@Autowired
 	public UserRepository userRepository;
 
-	static Random random = new Random();
+	static Random random = new SecureRandom();
 	
 	public  void createUser()
 	{
